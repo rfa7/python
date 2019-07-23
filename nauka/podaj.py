@@ -1,3 +1,8 @@
+"""
+Recursive function.
+There is a list of numbers. We adding those numbers to next box, and this two sets must be identical.
+We got a first occurence in our list and we using function to append to new list rest from original location (list).
+"""
 lista = [1,2,3,4,5,6,7,8]
 start = 1
 podano = [1]
