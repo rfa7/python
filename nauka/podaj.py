@@ -1,12 +1,12 @@
-w = int(input('Podaj liczbę: '))
-lista = [x for x in range(1,w+1)]
-print('Lista start:', lista[0], 'Lista stop:', lista[-1])
 """
 Recursive function.
 There is a list of numbers. We adding those numbers to next box, and this two sets must be identical.
 We got a first occurence in our list and we using function to append to new list rest from original location (list).
 """
-lista = [1,2,3,4,5,6,7,8]
+
+w = int(input('Podaj liczbę: '))
+lista = [x for x in range(1,w+1)]
+print('Lista start:', lista[0], 'Lista stop:', lista[-1])
 start = 1
 podano = [1]
 n = 0
