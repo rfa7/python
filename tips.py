@@ -1,5 +1,6 @@
 # Tips for playing with python
-
+a = 1
+b = 2
 
 # swap values
 
