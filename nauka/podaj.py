@@ -4,23 +4,23 @@ There is a list of numbers. We adding those numbers to next box, and this two se
 We got a first occurence in our list and we using function to append to new list rest from original location (list).
 """
 
-w = int(input('Podaj liczbę: '))
+w = int(input('Put your number, please: '))
 lista = [x for x in range(1,w+1)]
-print('Lista start:', lista[0], 'Lista stop:', lista[-1])
+print('List starts with:', lista[0], 'List ends:', lista[-1])
 start = 1
 podano = [1]
 n = 0
 def podaj(start, lista, n):
     if len(lista) <= 1+start*2:
-        print("KONIEC")
+        print("_________The END__________")
         # tu podano procedura
         lista = lista[start:]
         if len(lista) > 0:
             podano.append(lista[:])
             n += 1
         print(podano)
-        print(podano[-1])
-        print('start:', start,'|| N:', n, '|| N POWER 2 IS:',2**n, '|| Between...',
+        print('Last added element:', podano[-1])
+        print('Start No:', start,'|| N:', n, '|| N^^2 IS:',2**n, '|| Between...',
               2**n, 'and ...', 2**(n+1))
         return podano
     lista = lista[start:]
