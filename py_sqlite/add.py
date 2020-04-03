@@ -1,5 +1,5 @@
 import sqlite3
-import datetime
+from datetime import datetime
 
 #def addDeveloper(name, joiningDate):
 def addDeveloper(name):
@@ -19,10 +19,10 @@ def addDeveloper(name):
         # insert developer detail
         sqlite_insert_with_param = """INSERT INTO 'new_developers'
                                     ('name', 'joiningDate')
-                                    VALUES( ?,datetime('now'));"""
+                                    VALUES(?,?);"""
 
         #data_tuple = (id, name, joiningDate)
-        data_tuple = (name, )
+        data_tuple = (name, datetime.now())
         cursor.execute(sqlite_insert_with_param, data_tuple)
         sqliteConnection.commit()
         print("Developer added succesfully \n")
