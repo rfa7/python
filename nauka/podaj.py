@@ -10,13 +10,15 @@ print('List starts with:', lista[0], 'List ends:', lista[-1])
 start = 1
 podano = [1]
 n = 0
+
+
 def podaj(start, lista, n):
     if len(lista) <= 1+start*2:
         print("_________The END__________")
-        # tu podano procedura
         lista = lista[start:]
         if len(lista) > 0:
-            podano.append(lista[:])
+            for i in lista:
+                podano.append(i)
             n += 1
         print(podano)
         print('Last added element:', podano[-1])
@@ -25,8 +27,8 @@ def podaj(start, lista, n):
         return podano
     lista = lista[start:]
     new = start*2
-    podano.append(lista[0:new])
-    # print('nowy start :', new, ' podano: ', podano, 'N: ', n)
+    for i in lista[0:new]:
+        podano.append(i)
     podaj(new,lista, n+1)
 
 podaj(start,lista, n)
